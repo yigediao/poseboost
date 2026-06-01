@@ -19,9 +19,17 @@ The original dataset used in this work is [WFCDataset](https://github.com/yigedi
 
 The following examples show one sample from each baseline pipeline after PoseBoost refinement.
 
-| FoundationPose + PoseBoost | MegaPose + PoseBoost | SAM6D + PoseBoost |
-| --- | --- | --- |
-| <img src="Baseline+PoseBoost/foundationpose+poseboost/0017/pose_vis/frame_0017_three_stage_wireframes.png" width="420" alt="FoundationPose example"> | <img src="Baseline+PoseBoost/megapose+poseboost/0093/pose_vis/frame_0093_three_stage_wireframes.png" width="420" alt="MegaPose example"> | <img src="Baseline+PoseBoost/sam6d+poseboost/0020/pose_vis/frame_0020_three_stage_wireframes.png" width="420" alt="SAM6D example"> |
+### FoundationPose + PoseBoost
+
+<img src="Baseline+PoseBoost/foundationpose+poseboost/0017/pose_vis/frame_0017_three_stage_wireframes.png" width="900" alt="FoundationPose example">
+
+### MegaPose + PoseBoost
+
+<img src="Baseline+PoseBoost/megapose+poseboost/0093/pose_vis/frame_0093_three_stage_wireframes.png" width="900" alt="MegaPose example">
+
+### SAM6D + PoseBoost
+
+<img src="Baseline+PoseBoost/sam6d+poseboost/0020/pose_vis/frame_0020_three_stage_wireframes.png" width="900" alt="SAM6D example">
 
 ## Data Download
 
