@@ -6,7 +6,7 @@ This repository releases processed inputs, ground-truth annotations, baseline pr
 
 ## Overview
 
-The original dataset used in this work is [WFCDataset](https://github.com/yigediao/wfcdataset). This repository does not reintroduce the dataset as a new benchmark. Instead, it releases the processed data and pose estimation results used in our paper, including:
+We use [WFCDataset](https://github.com/yigediao/wfcdataset) to benchmark PoseBoost for 6D pose refinement in robotic wood-frame assembly. This repository releases the processed data and pose estimation results used for our benchmark, including:
 
 - object masks for each sample
 - raw RGB-D inputs
@@ -31,11 +31,21 @@ The following examples show one sample from each baseline pipeline after PoseBoo
 
 <img src="Baseline+PoseBoost/sam6d+poseboost/0020/pose_vis/frame_0020_three_stage_wireframes.png" width="900" alt="SAM6D example">
 
+## Real Robot Validation
+
+### PoseBoost Real-World Robotic Assembly Experiment
+
+[![PoseBoost real-world robotic assembly experiment](https://img.youtube.com/vi/sdJ511sR-bw/hqdefault.jpg)](https://youtu.be/sdJ511sR-bw?si=95T8LXwOJ9pCQnhQ)
+
+This video documents randomized single-stud grasping and fixed-target placement trials for validating our computer vision-based robotic wood-frame assembly system. In each trial, a 2x4 wood stud is randomly placed within the robot camera's field of view under cluttered workspace conditions, partial visibility, and varying illumination.
+
+The system uses RGB-D perception and geometry-consistent 6D pose estimation to identify the target stud, refine its pose, update the digital twin, plan a collision-aware robotic trajectory, and execute grasping, transportation, and placement at a predefined target location.
+
 ## Data Download
 
 The full repository content is intended for open-source release. Large files can be hosted on Dropbox and linked here:
 
-- Dropbox: `TODO`
+- Dropbox: [Download data here](https://www.dropbox.com/scl/fo/8mdbkkmxnvo2t2g6otrw0/ABD_AegQyW5RdAqws0z1jWs?rlkey=wer3h9d84qpr4vmqupzyrmlfc&st=uwyaljxc&dl=0)
 
 If some large files are not stored directly in GitHub, please download them and place them under the repository root using the directory structure below.
 
