@@ -33,6 +33,12 @@ The following examples show one sample from each baseline pipeline after PoseBoo
 
 ## Real Robot Validation
 
+### System Overview and Real Wood-Stud Assembly Experiment
+
+<a href="https://youtu.be/vjXvbbGfvfg?si=DoN4wz0cjzn_Gfxv">
+  <img src="https://img.youtube.com/vi/vjXvbbGfvfg/hqdefault.jpg" width="900" alt="PoseBoost system overview and real wood-stud assembly experiment">
+</a>
+
 ### PoseBoost Real-World Robotic Assembly Experiment
 
 <a href="https://youtu.be/sdJ511sR-bw?si=95T8LXwOJ9pCQnhQ">
