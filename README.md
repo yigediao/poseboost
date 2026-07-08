@@ -35,7 +35,9 @@ The following examples show one sample from each baseline pipeline after PoseBoo
 
 ### PoseBoost Real-World Robotic Assembly Experiment
 
-[![PoseBoost real-world robotic assembly experiment](https://img.youtube.com/vi/sdJ511sR-bw/hqdefault.jpg)](https://youtu.be/sdJ511sR-bw?si=95T8LXwOJ9pCQnhQ)
+<a href="https://youtu.be/sdJ511sR-bw?si=95T8LXwOJ9pCQnhQ">
+  <img src="https://img.youtube.com/vi/sdJ511sR-bw/hqdefault.jpg" width="900" alt="PoseBoost real-world robotic assembly experiment">
+</a>
 
 This video documents randomized single-stud grasping and fixed-target placement trials for validating our computer vision-based robotic wood-frame assembly system. In each trial, a 2x4 wood stud is randomly placed within the robot camera's field of view under cluttered workspace conditions, partial visibility, and varying illumination.
 
