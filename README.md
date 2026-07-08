@@ -43,27 +43,28 @@ The system uses RGB-D perception and geometry-consistent 6D pose estimation to i
 
 ## Data Download
 
-The full repository content is intended for open-source release. Large files can be hosted on Dropbox and linked here:
+The processed benchmark data and pose estimation results are hosted on Dropbox:
 
 - Dropbox: [Download data here](https://www.dropbox.com/scl/fo/8mdbkkmxnvo2t2g6otrw0/ABD_AegQyW5RdAqws0z1jWs?rlkey=wer3h9d84qpr4vmqupzyrmlfc&st=uwyaljxc&dl=0)
 
-If some large files are not stored directly in GitHub, please download them and place them under the repository root using the directory structure below.
+Please download the released files and extract any zip archives under the repository root. The extracted data follows the structure below.
 
-## Repository Structure
+## Data Structure
 
 ```text
 poseboost/
   README.md
+  browse_pose_images.py
   masks/
     0000/
-      mask.png
-    0001/
       mask.png
     ...
   raw_rgbd_data/
     0000/
-      color.png
-      depth.png
+      0000_left.png
+      0000_right.png
+      0000_depth.png
+      0000_cloud.ply
       K.txt
     ...
   rgbd_foundationstereo/
@@ -77,9 +78,13 @@ poseboost/
       0000_gt_pose.txt
       0000_gt_projected_rgb.png
       0000_gt_vertices.txt
-      ...
     ...
-  Baseline+PoseBoost/
+  ground_truth.zip
+  Baseline/
+    foundationpose_pose_result.zip
+    megapose_pose_result.zip
+    SAM6D_pose_result.zip
+  PoseBoost/
     foundationpose+poseboost/
       0000/
         ob_in_cam/
@@ -99,32 +104,49 @@ poseboost/
 
 ## Directory Description
 
-- `masks/`: per-sample segmentation masks
-- `raw_rgbd_data/`: original RGB-D observations
-- `rgbd_foundationstereo/`: RGB-D observations enhanced by FoundationStereo
-- `ground_truth/`: ground-truth poses, projected visualizations, and vertices
-- `Baseline+PoseBoost/foundationpose+poseboost/`: FoundationPose predictions, ICP results, final PoseBoost-refined poses, and visualizations
-- `Baseline+PoseBoost/megapose+poseboost/`: MegaPose predictions, ICP results, final PoseBoost-refined poses, and visualizations
-- `Baseline+PoseBoost/sam6d+poseboost/`: SAM6D predictions, ICP results, final PoseBoost-refined poses, and visualizations
+- `masks.zip`: per-sample segmentation masks
+- `raw_rgbd_data.zip`: original stereo RGB-D observations and point clouds
+- `rgbd_foundationstereo.zip`: RGB-D observations enhanced by FoundationStereo
+- `ground_truth.zip`: ground-truth poses, projected visualizations, and vertices
+- `Baseline/foundationpose_pose_result.zip`: native FoundationPose results
+- `Baseline/megapose_pose_result.zip`: native MegaPose results
+- `Baseline/SAM6D_pose_result.zip`: native SAM6D results
+- `PoseBoost/foundationpose+poseboost/`: FoundationPose results refined by PoseBoost
+- `PoseBoost/megapose+poseboost/`: MegaPose results refined by PoseBoost
+- `PoseBoost/sam6d+poseboost/`: SAM6D results refined by PoseBoost
+
+The released inputs and ground truth contain 288 samples. The FoundationPose and SAM6D PoseBoost results contain 288 samples, and the MegaPose PoseBoost results contain 243 samples.
 
 ## Per-sample File Format
 
-For each sample ID such as `0000`, the processed inputs are organized as:
+Each sample ID such as `0000` is organized as:
 
 ```text
 masks/0000/
   mask.png
 
+raw_rgbd_data/0000/
+  0000_left.png
+  0000_right.png
+  0000_depth.png
+  0000_cloud.ply
+  K.txt
+
 rgbd_foundationstereo/0000/
   color.png
   depth.png
   K.txt
+
+ground_truth/0000/
+  0000_gt_pose.txt
+  0000_gt_projected_rgb.png
+  0000_gt_vertices.txt
 ```
 
-Each baseline result folder contains:
+Each PoseBoost result folder contains:
 
 ```text
-Baseline+PoseBoost/<method>/0000/
+PoseBoost/<method>/0000/
   ob_in_cam/
     0000_<method>_raw_pose.txt
     0000_icp_pose.txt
