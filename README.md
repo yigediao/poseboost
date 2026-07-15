@@ -41,8 +41,8 @@ The following examples show one sample from each baseline pipeline after PoseBoo
 
 ### Experiment 1: High-Precision Robotic Grasping and Placement with PoseBoost
 
-<a href="https://youtu.be/sdJ511sR-bw?si=95T8LXwOJ9pCQnhQ">
-  <img src="https://img.youtube.com/vi/sdJ511sR-bw/hqdefault.jpg" width="900" alt="High-precision robotic grasping and placement with PoseBoost">
+<a href="https://youtu.be/Nxnd2X2dTR8?si=5luB5n17BmgOdheH">
+  <img src="https://img.youtube.com/vi/Nxnd2X2dTR8/hqdefault.jpg" width="900" alt="High-precision robotic grasping and placement with PoseBoost">
 </a>
 
 This video documents randomized single-stud grasping and fixed-target placement trials for validating our computer vision-based robotic wood-frame assembly system. In each trial, a 2x4 wood stud is randomly placed within the robot camera's field of view under cluttered workspace conditions, partial visibility, and varying illumination.
